@@ -1,0 +1,5 @@
+- name: "REBOOTING TARGET. SSH PORT IS {{ssh_bind_port}} USER NAME IS {{admin_user}} USER PASSWORD IS {{admin_password}} ROOT PASSWORD IS {{new_root_password}}"
+  shell: "sleep 5 && reboot"
+  async: 1
+  poll: 0
+  ignore_errors: yes

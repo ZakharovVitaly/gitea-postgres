@@ -1,0 +1,21 @@
+- name: Uploading Gitea database dump to /tmp
+  copy:
+    src: "{{gitea_db}}.sql"
+    dest: "/tmp"
+    owner: postgres
+    group: root
+    mode: 0640
+
+- name: Restoring database dump
+  become: true
+  become_user: postgres
+  become_method: su
+  postgresql_db:
+    name={{gitea_db}}
+    state=restore
+    target=/tmp/gitea.sql
+
+- name: Removing db dump from /tmp
+  file:
+    name=/tmp/gitea.sql
+    state=absent

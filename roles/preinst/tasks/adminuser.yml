@@ -1,0 +1,7 @@
+- name: Add the user {{admin_user}}  with group {{admin_group}}
+  user:
+    name: "{{admin_user}}"
+    group: "{{admin_group}}"
+
+- name: Resetting admin user password
+  shell: "yes '{{admin_password}}' | passwd {{admin_user}}"

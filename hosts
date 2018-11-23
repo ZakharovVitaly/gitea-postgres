@@ -1,0 +1,2 @@
+[gitea]
+10.0.x.x ansible_ssh_pass='S3(r3T' ansible_ssh_user='root' ansible_ssh_port='22'
