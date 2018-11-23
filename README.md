@@ -1,4 +1,4 @@
-Gitea git repo with Postrges backend and Nginx frontend.
+Gitea git repo with Postrges backend and self-signed SSL keys ($env GIT_SSL_NO_VERIFY=true git ... ).
 OS: Debian 9.
 
 
