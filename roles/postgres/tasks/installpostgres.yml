@@ -5,10 +5,10 @@
     install_recommends: no
     update_cache: yes
 
-- name: Restarting Postgresql daemon
+- name: Starting Postgresql daemon
   systemd:
    name: 'postgresql'
-   state: restarted
+   state: started
    enabled: yes
    daemon-reload: yes
 
